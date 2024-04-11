@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_Do_List</title>
+    <style>
+        .div {
+            box-sizing: border-box;
+            height: 40vh;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            border: 2px solid burlywood;
+            background-color: white;
+            color: black;
+        }
+
+        .div h1 {
+            font-size: 3rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .input {
+            height: 10vh;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2%;
+            padding: 10px;
+        }
+
+        .input input {
+            border-radius: 10px;
+            height: 23px;
+            padding: 3px 12px;
+        }
+
+        .input Button {
+            width: 84px;
+            height: 3vh;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 2px 2px;
+            background-color: tomato;
+            color: white;
+            font-weight: 600;
+        }
+
+        .input Button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #list {
+            list-style: none;
+        }
+
+        #list li {
+            padding: 4px 1px;
+            user-select: none;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Div -->
+    <div class="div">
+        <h1>To Do List</h1>
+        <!-- Input -->
+        <div class="input">
+            <input type="text" id="input_box" placeholder="Enter Here">
+            <Button onclick="addTask">Add</Button>
+        </div>
+        <!-- Input -->
+
+        <ul id="list">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </div>
+    <!-- Div -->
+
+
+
+    <Script>
+        let input_box = document.getElementById("input_box");
+        let list = document.getElementById("list");
+        function addTask() {
+            if (input_box.value === '') {
+                alert("You Must Write !");
+            }
+            else {
+                let li = document.createElement("li");
+            }
+        }
+
+    </Script>
+</body>
+
+</html>

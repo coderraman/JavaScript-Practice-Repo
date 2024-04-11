@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce Method</title>
+  </head>
+  <body>
+    <script>
+      // Reduce Method
+      // It Peforms some operations & reduce the array to a single value. It returns the Single value!
+      // IN this Function We use 2 value (current and previous)
+      let array = [1, 2, 3, 4, 5];
+      const FinalResult = array.reduce((curr, resul) => {
+        return curr * resul;
+      });
+      console.log(FinalResult);
+
+      // Now same like this function if we want to see Large Value So We can use
+      let array1 = [1, 2, 3, 4, 5];
+      const FinalResult1 = array1.reduce((curr, resul) => {
+        return curr < resul ? curr : resul;
+      });
+      console.log(FinalResult1);
+    </script>
+  </body>
+</html>

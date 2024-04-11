@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission Example</title>
+</head>
+<body>
+    <div class="navbar">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+
+    .search-bar {
+      position: relative;
+      width: 300px;
+      max-width: 100%;
+      margin: 0 10px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%);
+      right: 10px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      .search-bar {
+        width: 100%;
+      }
+
+      .search-icon {
+        display: block;
+      }
+
+      .search-input {
+        padding-right: 40px; /* Space for the icon */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search...">
+      <div class="search-icon">&#128269;</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+    </div>
+
+  <form id="myForm">
+    <!-- Your form fields go here -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="Mobile">Mobile No:</label>
+    <input type="Mobile" id="Mobile" name="Mobile" required>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevents the default form submission
+
+      // You can add additional validation logic here if needed
+
+      // Assuming you want to perform an AJAX submission
+      // Replace the URL with the actual endpoint you want to submit the form to
+      const url = "https://example.com/submit";
+      
+      // Assuming you want to use fetch for the submission
+      fetch(url, {
+        method: "POST",
+        body: new FormData(event.target)
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle any errors that occurred during the fetch
+        console.error("Error:", error);
+      });
+    });
+  </script>
+
+</body>
+</html>

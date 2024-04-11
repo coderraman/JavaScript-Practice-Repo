@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foreach</title>
+  </head>
+  <body>
+    <script>
+      // Foreach Loop in Arrays its a Call Back Function!
+      //   let array = ["Raman", "Rahul", "Girish"];
+      //   {
+      //     array.forEach((value,index,array) => {
+      //       console.log(value.toUpperCase(),index);
+      //     });
+      //     console.log("All'r Friends");
+      //   }
+
+      // For a given array of number, print the square of each value using the forEach loop !
+
+      let num = [265, 105, 410];
+      //   num.forEach((num) => {
+      //     console.log(num * num);
+      //   });
+
+      let calculate = (num) => {
+        console.log(num * num);
+      };
+      num.forEach(calculate);
+    </script>
+  </body>
+</html>

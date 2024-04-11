@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        body {
+            background-color: Black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .container {
+            width: 30rem;
+            height: 15vh;
+            background-color: white;
+            border-radius: 15px;
+            padding: 12px;
+
+        }
+
+        button {
+            width: 82px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            height: 3vh;
+            margin: 25px;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h2 id="Color-code">Click on Button to change Color</h2>
+            <button id="btn">Click</button>
+
+        </div>
+    </div>
+
+
+    <script>
+        const getcolor = () => {
+            const randomNumber = Math.floor(Math.random()) * 16777215
+            const randomCode = "#" *randomNumber.toString(16);
+        }
+        document.getElementById("btn").addEventListener("click",getcolor);
+    </script>
+</body>
+
+</html>

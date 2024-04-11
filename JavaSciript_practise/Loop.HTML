@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+
+  <body>
+    <script>
+      // whileLoop
+      // let a = 80;
+      // while (a < 100) {
+      //     console.log(a);
+      //     a++;
+      // }
+
+      // Practice
+      // Create a function using the "function" keyword that takes a string as an argument & returns the number of vowels in the string.
+      //   let str = "Hello World";
+      function Findvowel(str) {
+        let count = 0;
+        for (const char of str) {
+          if (
+            char === "a" ||
+            char === "e" ||
+            char === "i" ||
+            char === "o" ||
+            char === "u"
+          ) {
+            count++;
+          }
+        }
+        console.log(count);
+      }
+    </script>
+  </body>
+</html>

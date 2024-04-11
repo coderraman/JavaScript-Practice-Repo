@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Method</title>
+  </head>
+  <body>
+    <script>
+      // Create a new array of element that gives true for a  condition/filer !
+      // Eg:all Even Num
+      // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // let filr = array.filter((value) => {
+      //   return value > 2;
+      // });
+      // console.log(filr);
+
+      // we are given an array of marks of students. Filter out of the marks of student that scored 90+!
+      let array = [95, 98, 105, 48, 82, 94];
+      let Newarray = array.filter((value) => {
+       return value>90;
+      });
+      console.log(Newarray);
+    </script>
+  </body>
+</html>
